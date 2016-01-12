@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BluetoothComm</string>
+    <string name="button_connect">Connect</string>
+    <string name="button_disconnect">Disconnect</string>
+    <string name="title_devices">Devices</string>
+    <string name="action_disconnect">Disconnect</string>
+    <string name="action_exit">Exit</string>
+    <string name="action_switch">Switch</string>
+    <string name="scan">Scan</string>
+    <string name="connected">Not Connected</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
