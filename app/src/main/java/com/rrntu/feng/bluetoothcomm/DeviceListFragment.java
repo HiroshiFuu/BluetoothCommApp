@@ -38,6 +38,7 @@ public class DeviceListFragment extends Fragment implements AbsListView.OnItemCl
     private ArrayList <DeviceItem>deviceItemList;
 
     private OnFragmentInteractionListener mListener;
+
     private static BluetoothAdapter BTAdapter;
 
     /**

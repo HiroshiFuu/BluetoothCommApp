@@ -22,7 +22,6 @@ public class ConnectThread{
         this.BTDevice = deviceItem.getDevice();
 
         try {
-            //Log.d("getUuids()",UUID.fromString("00001101-0000-1000-8000-00805F9B34FB").toString());
             //tmp = BTDevice.createRfcommSocketToServiceRecord(BTDevice.getUuids()[0].getUuid());
             tmp = this.BTDevice.createRfcommSocketToServiceRecord(Common.PANUServiceClass_UUID);
         }

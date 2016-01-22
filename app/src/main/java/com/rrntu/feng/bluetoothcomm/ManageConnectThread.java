@@ -19,14 +19,14 @@ public class ManageConnectThread {
     public ManageConnectThread() { }
 
     public void sendData(BluetoothSocket socket, byte[] data) throws IOException{
-        ByteArrayOutputStream output = new ByteArrayOutputStream(20);
+        ByteArrayOutputStream output = new ByteArrayOutputStream(16);
         output.write(data);
         OutputStream outputStream = socket.getOutputStream();
         outputStream.write(output.toByteArray());
     }
 
     public byte[] receiveData(BluetoothSocket socket) throws IOException {
-        byte[] buffer = new byte[20];
+        byte[] buffer = new byte[16];
         ByteArrayInputStream input = new ByteArrayInputStream(buffer);
         InputStream inputStream = socket.getInputStream();
         inputStream.read(buffer);

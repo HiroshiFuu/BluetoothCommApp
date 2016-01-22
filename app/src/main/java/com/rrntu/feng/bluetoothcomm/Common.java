@@ -3,6 +3,7 @@ package com.rrntu.feng.bluetoothcomm;
 import android.bluetooth.BluetoothSocket;
 import android.util.Log;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.UUID;
 
@@ -20,6 +21,7 @@ public class Common {
     public static ManageConnectThread connectedThread = new ManageConnectThread();
     public static boolean receiving = false;
     public static boolean isAlive = false;
+    public static FileOutputStream fos;
 
     public static void setActivity(ListActivity activity) {
         listactivity = activity;
@@ -98,6 +100,13 @@ public class Common {
             Common.connectedDevice = null;
             Common.SocketConnect.cancel();
             listactivity.switchToDeviceList();
+            try {
+                fos.close();
+                Log.d("disconnectDevice()", "file closed");
+            } catch (IOException e) {
+                Log.d("FILECLODE", e.toString());
+            }
+            fos = null;
             Log.d("Common.connectedDevice", "device disconnected");
             return true;
         }
